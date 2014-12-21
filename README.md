@@ -12,16 +12,18 @@ The program in this folder conducts 5 tasks:
 The script *run_analysis.R* contains a method `run_analysis()` that does not require any parameters.  This is the main function that will do all the work.  This script will requires that the working directory is set to the location of the data files and that the data files are present (folders for test and train should be contained in this working directory and all files remain with original names.)
 
 This script depends upon:
-  supplementary R source code:
-    1. get_x_files.R  <-- code to read in the feature observations
-    2. get_inertialsignals.R  <-- code to read in the raw data this script uses some external packages that will be installed if not available.  they include:
-       plyr; reshape; dplyr; tidyr
+- supplementary R source code:
+  1.  get_x_files.R  <-- code to read in the feature observations
+  2.  get_inertialsignals.R  <-- code to read in the raw data this script uses some external packages that will be installed if not available.  they include:
+    ----------------------------------  
+    | plyr | reshape | dplyr | tidyr |
+    ----------------------------------
 
-    this script will read files in the working directory and write files to the working directory.
-    after running the script there will be these additional files in the working directory:
-      1. merged_summary_df.txt
-      2. inertialSignals.RDS
-      3. features_tidy_df.RDS
+- this script will read files in the working directory and write files to the working directory.
+- after running the script there will be these additional files in the working directory:
+  1.  merged_summary_df.txt
+  2.  inertialSignals.RDS
+  3.  features_tidy_df.RDS
 
 #Approach
 The overall approach the code has taken is:
@@ -49,12 +51,12 @@ The data is then reshaped to make it tidy.  This discussion spells out the overa
 #### excerpt
 >
 For this assignment we are only using the features involving the standard deviation and the mean as a subset of all the available features.
-
-3 - I would say they are discrete members of the set of observations, as it is possible for an action to change a y direction reading in the phone without changing a x or z direction reading"
 >
+3 - I would say they are discrete members of the set of observations, as it is possible for an action to change a y direction reading in the phone without changing a x or z direction reading"
+
 
 
 ##Summarizing the data
-Summarise.features.tidy() is the method that creates a summary of the data using dplyr and tidyr to goup_by the collection of (subjected, activity, vector name, axis) and calculates the mean of the mean values and the mean of the standard deviation values for all measurements .
+`Summarise.features.tidy()` is the method that creates a summary of the data using dplyr and tidyr to goup_by the collection of (subjected, activity, vector name, axis) and calculates the mean of the mean values and the mean of the standard deviation values for all measurements .
 
 Once the data is summarized, the summary data is written to a .txt file placed in the working folder.  In addition, cached versions of the two datasets are also written to the working folders as RDS files (R object files), so subsequent runs are much faster.
