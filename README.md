@@ -15,9 +15,8 @@ This script depends upon:
 - supplementary R source code:
   1.  get_x_files.R  <-- code to read in the feature observations
   2.  get_inertialsignals.R  <-- code to read in the raw data this script uses some external packages that will be installed if not available.  they include:
-    ----------------------------------  
-    | plyr | reshape | dplyr | tidyr |
-    ----------------------------------
+
+  | plyr | reshape | dplyr | tidyr |
 
 - this script will read files in the working directory and write files to the working directory.
 - after running the script there will be these additional files in the working directory:
@@ -34,7 +33,7 @@ The overall approach the code has taken is:
 5.  output the summary of this tidy set of data
 
 ###Special note - raw data provided as supplemental data
-In addition, it will read in all the raw data and extract the sum and mean for this data and include this in the above datasets.  (note:  I am doing this based upon my original interpretation of the assignment and the definition of extract (which is ‘to calculate’) as found in this thread: https://class.coursera.org/getdata-016/forum/thread?thread_id=218  … since this was my original interpretation of the assignment, I include it here in addition to completing the assignment based upon the interpretation of Dave FAQ https://class.coursera.org/getdata-016/forum/thread?thread_id=50 as found here, and I combine the two sets of information to give a complete set of means across all vectors … so if you are used to just Dave’s set of data, you’might notice some extra datapoints, but the ones you are used to will still line up and have matching values.  (notice that there are 5940 x 6 data points for the features data, and there are 1620 x 6 data points for the raw data yielding a total of 7560 rows by 6 columns).
+In addition, it will read in all the raw data and extract the sum and mean for this data and include this in the above datasets.  (note:  I am doing this based upon my original interpretation of the assignment and the definition of extract (which is ‘to calculate’) as found in [this thread 218](https://class.coursera.org/getdata-016/forum/thread?thread_id=218). This was my interpretation of the assignment, so I include it here in addition to completing the assignment based upon the interpretation of [Dave FAQ forum post 50](https://class.coursera.org/getdata-016/forum/thread?thread_id=50) as found here, and I combine the two sets of information to give a complete set of means across all vectors … so if you are used to just Dave’s set of data, you’might notice some extra datapoints, but the ones you are used to will still line up and have matching values.  (notice that there are 5940 x 6 data points for the features data, and there are 1620 x 6 data points for the raw data yielding a total of 7560 rows by 6 columns).
 
 ##Reading in the x_*.txt data:
 The program first uses data from the x_train.txt and the x_test.txt data files.   Train and Test correspond to arbitrary partitioning of the data into a 30% 70% split.  As part of the program the data from the two partitions are remerged together into a single set. 
