@@ -22,11 +22,13 @@ this is a numeric measurement calculating the mean of the mean values across all
 this is a numeric measurement calculating the mean of the standard deviation across all the recordings for the same type of activity matching the keys of this row (observation).   This value does not have units and is always between -1 and 1 as the underlying data was normalized between all rows in this study as explained in the study’s original documentation and on [this FAQ.](https://class.coursera.org/getdata-016/forum/thread?thread_id=50)
     
 ##Tidy data
-The output conforms to Tidy Data as it is a datafile that consists of 6 columns where all the columns follow Hadley’s recommendations of tidy data. http://vita.had.co.nz/papers/tidy-data.pdf
+The output conforms to Tidy Data as it is a datafile that consists of 6 columns where all the columns [follow Hadley’s recommendations of tidy data.](http://vita.had.co.nz/papers/tidy-data.pdf)
 Hadley recommendations on tidy data boil down to these 3 criteria quoted from above pdf:
-
+>
 1.  Each variable forms a column.
+>
 2.  Each observation forms a row.
+>
 3.  Each type of observational unit forms a table.
 
 In addition, there are notes from the TA in [this coursera forum thread 100](https://class.coursera.org/getdata-016/forum/thread?thread_id=100) indicating that each axis is its own observation and contains two columns of measurements – mean and standard deviation.  Excerpt quoted below:   
