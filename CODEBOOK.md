@@ -8,17 +8,17 @@ Overall there are 7560 x 6 data points correlating to:
 -  7560 x 6 datapoints derived from the features summary data found in x_*.txt files
 
 The 6 columns of the tidy data set include 4 keys and 2 measures detailed:
-1.  ######Subject ID 
+######1.  Subject ID 
 integer value variable from 1 to 30 uniquely identifying the subject across observations. 
-2.  ######Activity
+######2.  Activity
 this key is a factor text value variable indicating one of the six possible activities performed during the measurement  These values are sourced at activity_labels.txt
-3.  ######Vector
+######3.  Vector
 this key is a character value variable indicating the vector as derived from the names found in source file features.txt
-4.  ######Axis
+######4.  Axis
 this key is a text field variable indicating the Cartesinal direction of the measured value – possible values are X,Y,Z and there are some measurements that there is no value indicating that type of measurement is not broken into caresinal components
-5.  ######Mean.mean
+######5.  Mean.mean
 this is a numeric measurement calculating the mean of the mean values across all the recordings for the same type of activity matching the keys of this row (observation).  This value does not have units, and is always between -1 and 1 as the underlying data was normalized between these values as explained in the study’s original documentation and on [this FAQ.](https://class.coursera.org/getdata-016/forum/thread?thread_id=50)
-6.  ######Mean.std
+######6.  Mean.std
 this is a numeric measurement calculating the mean of the standard deviation across all the recordings for the same type of activity matching the keys of this row (observation).   This value does not have units and is always between -1 and 1 as the underlying data was normalized between all rows in this study as explained in the study’s original documentation and on [this FAQ.](https://class.coursera.org/getdata-016/forum/thread?thread_id=50)
     
 ##Tidy data
